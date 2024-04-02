@@ -1,0 +1,17 @@
+/*
+Task: There is a list of int numbers, divided by \n. Print them on the screen in the same order but if number = 10, stop printing the numbers. Also, if number = 5 or 15, skip them.
+*/
+
+<?php
+$f = 0;
+while ($f != 10) {
+    $f = fgets(STDIN);
+    if ($f == 10) {
+        break;
+    };
+    if ($f == 5 || $f == 15) {
+        continue;
+    };
+    echo $f;
+}
+?>
