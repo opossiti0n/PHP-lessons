@@ -1,16 +1,41 @@
-//magic8ball
-
 <?php
 
 function magic8Ball()
 {
+    $str1_arr = [
+        "Hmm, let me think, let me think...",
+        "Difficult task to consider...",
+        "Work again...",
+        "Looking into your future is not easy...",
+    ];
+    $str1_output = array_rand($str1_arr);
+
+    $str2_arr = [
+        "Almost there...",
+        "I think I know the answer...",
+        "So unclear...",
+        "So many options...",
+    ];
+    $str2_output = array_rand($str2_arr);
+
+    $str3_arr = [
+        "Decisions to be made...",
+        "Aaaaaaaaaand...",
+        "(sigh) Not again...",
+        "I hope you won't be mad at me...",
+    ];
+    $str3_output = array_rand($str3_arr);
+
+    // Text output
     echo "\n\nAsk me anything that I can answer with \"yes\" or \"no\" (▰˘◡˘▰) \n";
     $question = readline(">> ");
-    echo "Your question is \"$question\". Hmm, let me think, let me think...\n";
-    echo "Almost there...\n";
-    echo "Decisions to be made...\n";
-    echo "Aaaaaaaaaand...\n";
+    echo "Your question is \"$question\".\n\n";
+    echo $str1_arr[$str1_output] . "\n";
+    echo $str2_arr[$str2_output] . "\n";
+    echo $str3_arr[$str3_output] . "\n";
     echo "My answer is... ";
+
+    // Working with random answer
     $answer = rand(0, 19);
 
     switch ($answer) {
@@ -80,6 +105,7 @@ function magic8Ball()
     }
 }
 
+// Asking the question again
 while (TRUE) {
     magic8Ball();
 }
