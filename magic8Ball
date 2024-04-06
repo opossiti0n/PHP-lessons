@@ -10,7 +10,7 @@ function magic8Ball()
     echo "Almost there...\n";
     echo "Decisions to be made...\n";
     echo "Aaaaaaaaaand...\n";
-    echo "My answer is...\n\n";
+    echo "My answer is... ";
     $answer = rand(0, 19);
 
     switch ($answer) {
