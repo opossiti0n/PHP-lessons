@@ -4,7 +4,7 @@
 
 function magic8Ball()
 {
-    echo "Ask me anything that I can answer with \"yes\" or \"no\" (▰˘◡˘▰) \n";
+    echo "\n\nAsk me anything that I can answer with \"yes\" or \"no\" (▰˘◡˘▰) \n";
     $question = readline(">> ");
     echo "Your question is \"$question\". Hmm, let me think, let me think...\n";
     echo "Almost there...\n";
@@ -79,4 +79,7 @@ function magic8Ball()
             break;
     }
 }
-magic8Ball();
+
+while (TRUE) {
+    magic8Ball();
+}
