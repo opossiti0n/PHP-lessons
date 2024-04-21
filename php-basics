@@ -1,8 +1,6 @@
-/*
-Task: There is a list of int numbers, divided by \n. Print them on the screen in the same order but if number = 10, stop printing the numbers. Also, if number = 5 or 15, skip them.
-*/
-
 <?php
+/* There is a list of int numbers, divided by \n. Print them on the screen in the same order but if number = 10, stop printing the numbers. Also, if number = 5 or 15, skip them. */
+
 $f = 0;
 while ($f != 10) {
     $f = fgets(STDIN);
@@ -14,4 +12,23 @@ while ($f != 10) {
     };
     echo $f;
 }
-?>
+
+/* Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel. */
+
+function replace(string $s): string {
+  $vowels = [
+    'a' => true, 'A' => true, 
+    'e' => true, 'E' => true, 
+    'i' => true, 'I' => true, 
+    'o' => true, 'O' => true, 
+    'u' => true, 'U' => true
+  ];
+  $str_array = str_split($s);
+  foreach ($str_array as $index => $letter) {
+    if (isset($vowels[$letter])) {
+      $str_array[$index] = "!";
+    }
+  }
+  $s = implode($str_array);
+  return $s;
+}
